@@ -1,5 +1,5 @@
 {
-  "name": "insomna-twitch-extension-barrycarlyon",
+  "name": "insomnia-plugin-twitch-extension-barrycarlyon",
   "version": "1.0.0",
   "main": "plugin.js",
   "insomnia": {
