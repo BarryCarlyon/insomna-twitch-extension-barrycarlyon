@@ -25,7 +25,7 @@
     "description": "This Plugin uses an Insomnia Environment to generate JWT's for calling various Twitch Extension endpoints. It'll also smooth development by also JSON-ifing some payloads (yay nested JSON)",
     "publisher": {
       "name": "Barry Carlyon",
-      "icon": "https://barrycarlyon.co.uk/"
+      "icon": "https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/blob/main/logo.png?raw=true"
     },
     "images": {
         "icon": "logo.png"
