@@ -1,0 +1,353 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2021-09-06T21:36:55.270Z",
+  "__export_source": "insomnia.desktop.app:v2021.5.2",
+  "resources": [
+    {
+      "_id": "req_c1eb8ab6bb464ce4a21da94ccc515f3b",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870808,
+      "created": 1630963870808,
+      "url": "https://api.twitch.tv/helix/extensions/configurations",
+      "name": "Get Global Config",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_5f85a0ebdb544b20b5c190dad64f468a",
+          "name": "segment",
+          "value": "global",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1630963470853,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "fld_6e05f586cf864996a386738e39a854ee",
+      "parentId": "wrk_eaf35713b99244d59fb9606fb71f3f45",
+      "modified": 1630963870806,
+      "created": 1630963870806,
+      "name": "JWT Endpoints",
+      "description": "",
+      "environment": {},
+      "environmentPropertyOrder": null,
+      "metaSortKey": -1000000000,
+      "_type": "request_group"
+    },
+    {
+      "_id": "wrk_eaf35713b99244d59fb9606fb71f3f45",
+      "parentId": null,
+      "modified": 1630963789704,
+      "created": 1630963789704,
+      "name": "Twitch Extensions Insomnia",
+      "description": "",
+      "scope": "collection",
+      "_type": "workspace"
+    },
+    {
+      "_id": "req_78aab2aaa51a4f01a0e6291ff177b13c",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870811,
+      "created": 1630963870811,
+      "url": "https://api.twitch.tv/helix/extensions/configurations",
+      "name": "Get Broadcaster Config",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [
+        {
+          "id": "pair_5f85a0ebdb544b20b5c190dad64f468a",
+          "name": "segment",
+          "value": "broadcaster",
+          "description": ""
+        },
+        {
+          "id": "pair_e9bf481cfe0e4a839394248a2fe46fb3",
+          "name": "broadcaster_id",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1630952780843,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_dfacb63eb6f54c4b9188c6dd5ca191fe",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870815,
+      "created": 1630963870815,
+      "url": "https://api.twitch.tv/helix/extensions/configurations",
+      "name": "Set Global Config",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"segment\": \"global\",\n\t\"content\": {\n\t\t\"cat\": \"dog\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630952780793,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_5f086112457f4f1aae1fb5136f2f4b4b",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870819,
+      "created": 1630963870819,
+      "url": "https://api.twitch.tv/helix/extensions/configurations",
+      "name": "Set Broadcaster Config",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"segment\": \"broadcaster\",\n\t\"broadcaster_id\": \"\",\n\t\"content\": {\n\t\t\"cat\": \"dog\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_7a7f976edd9d4ee39edfc17703fa9327"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630947435813,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_18bcf03aff65474cb3ea7353f048eb3a",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870829,
+      "created": 1630963870829,
+      "url": "https://api.twitch.tv/helix/extensions/required_configuration",
+      "name": "Set Extension Required Configuration",
+      "description": "",
+      "method": "PUT",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"broadcaster_id\": \"\",\n\t\"configuration_version\": \"\"\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_7a7f976edd9d4ee39edfc17703fa9327"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630947435788,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_d13ea511b6bb47f49f3d4f38c282d5c8",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870823,
+      "created": 1630963870823,
+      "url": "https://api.twitch.tv/helix/extensions/pubsub",
+      "name": "Send Global Extension PubSub",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"target\": [\n\t\t\"global\"\n\t],\n\t\"is_global_broadcast\": true,\n\t\"message\": {\n\t\t\"cake\": \"pie\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_65c5752032aa47ef8dfbe47e776ca1d6"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630947435763,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_74ab5410fd30426ca1e069a95e7262dd",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870826,
+      "created": 1630963870826,
+      "url": "https://api.twitch.tv/helix/extensions/pubsub",
+      "name": "Send Channel Extension PubSub",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"target\": [\n\t\t\"broadcast\"\n\t],\n\t\"is_global_broadcast\": false,\n\t\"channel_id\": \"\",\n\t\"message\": {\n\t\t\"cake\": \"pie\"\n\t}\n}"
+      },
+      "parameters": [],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_65c5752032aa47ef8dfbe47e776ca1d6"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630944763298,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "req_85ec83a16abf4df5bde480406bb64310",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1630963870832,
+      "created": 1630963870832,
+      "url": "https://api.twitch.tv/helix/extensions/chat",
+      "name": "Send Extension Chat",
+      "description": "",
+      "method": "POST",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\n\t\"text\": \"test\"\n}"
+      },
+      "parameters": [
+        {
+          "id": "pair_e55f6671f3a24d6381b3fff8b8e73b88",
+          "name": "broadcaster_id",
+          "value": "",
+          "description": ""
+        }
+      ],
+      "headers": [
+        {
+          "name": "Content-Type",
+          "value": "application/json",
+          "id": "pair_2c9694af2ada47a5a58c0ea5b87ba980"
+        }
+      ],
+      "authentication": {},
+      "metaSortKey": -1630944763248,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
+      "_id": "env_2e652e2ec586de6d52f561086ff9570517dd77e4",
+      "parentId": "wrk_eaf35713b99244d59fb9606fb71f3f45",
+      "modified": 1630964124065,
+      "created": 1630963789717,
+      "name": "Base Environment",
+      "data": {},
+      "dataPropertyOrder": {},
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1630963789717,
+      "_type": "environment"
+    },
+    {
+      "_id": "jar_2e652e2ec586de6d52f561086ff9570517dd77e4",
+      "parentId": "wrk_eaf35713b99244d59fb9606fb71f3f45",
+      "modified": 1630963789720,
+      "created": 1630963789720,
+      "name": "Default Jar",
+      "cookies": [],
+      "_type": "cookie_jar"
+    },
+    {
+      "_id": "spc_2944c0a82c3b435ba8a6ebad120fcea8",
+      "parentId": "wrk_eaf35713b99244d59fb9606fb71f3f45",
+      "modified": 1630963789708,
+      "created": 1630963789708,
+      "fileName": "Twitch Extensions Insomnia",
+      "contents": "",
+      "contentType": "yaml",
+      "_type": "api_spec"
+    },
+    {
+      "_id": "env_b31b7e7508974d73aa2d548a9e73c969",
+      "parentId": "env_2e652e2ec586de6d52f561086ff9570517dd77e4",
+      "modified": 1630964137760,
+      "created": 1630964126242,
+      "name": "Blank Twitch Extension",
+      "data": {
+        "client_id": "",
+        "client_secret": "",
+        "extension_secret": "",
+        "owner_id": "",
+        "version": ""
+      },
+      "dataPropertyOrder": {
+        "&": [
+          "client_id",
+          "client_secret",
+          "extension_secret",
+          "owner_id",
+          "version"
+        ]
+      },
+      "color": null,
+      "isPrivate": false,
+      "metaSortKey": 1630964126242,
+      "_type": "environment"
+    }
+  ]
+}
