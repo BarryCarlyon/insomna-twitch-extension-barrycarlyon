@@ -1,0 +1,21 @@
+{
+  "name": "insomna-twitch-extension-barrycarlyon",
+  "version": "1.0.0",
+  "main": "plugin.js",
+  "insomnia": {
+    "name": "twitch_extension",
+    "displayName": "Twitch Extension",
+    "description": "...",
+    "publisher": {
+      "name": "Barry Carlyon",
+      "icon": "https://barrycarlyon.co.uk"
+    },
+    "applications": {
+      "designer": "*",
+      "core": "*",
+      "cli": "*"
+    }
+  },
+  "dependencies": [],
+  "devDependencies": []
+}
