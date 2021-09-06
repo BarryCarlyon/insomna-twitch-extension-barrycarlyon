@@ -1,4 +1,4 @@
-# insomnia-twitch-extension-barrycarlyon
+# insomnia-plugin-twitch-extension-barrycarlyon
 
 This is a plugin for [insomnia](https://insomnia.rest) that will help with Twitch Extension Development by handle JWT Generation for you.
 
