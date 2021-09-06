@@ -4,25 +4,29 @@ module.exports.requestHooks = [
     async context => {
         console.log('Running insomna-twitch-extension-barrycarlyon')
         const client_id = context.request.getEnvironmentVariable('client_id');
-        const client_secret = context.request.getEnvironmentVariable('client_secret');
+        //const client_secret = context.request.getEnvironmentVariable('client_secret');
         const extension_secret = context.request.getEnvironmentVariable('extension_secret');
         const owner_id = context.request.getEnvironmentVariable('owner_id');
         const version = context.request.getEnvironmentVariable('version');
 
         const extension_secret_usable = Buffer.from(extension_secret, 'base64');
 
+        let url = context.request.getUrl().toLowerCase();
+        if (!url || url == '') {
+            // no URL abort
+            return;
+        }
+
         let sigPayload = {
             'exp':          Math.floor(new Date().getTime() / 1000) + 10,
             'user_id':      owner_id,
             'role':         'external'
         }
-        let sig = jwt.sign(sigPayload, extension_secret_usable);
-
-        //console.log(context.request.getUrl());
-        let url = context.request.getUrl();
 
         // configuration service
-        if (url.indexOf('extensions/configurations') >= 0) {
+        if (url.startsWith('https://api.twitch.tv/helix/extensions/configurations')) {
+            let sig = jwt.sign(sigPayload, extension_secret_usable);
+
             context.request.addHeader('Client-ID', `${client_id}`);
             context.request.addHeader('Authorization', `Bearer ${sig}`);
 
@@ -49,7 +53,9 @@ module.exports.requestHooks = [
                 context.request.setParameter('extension_id', `${client_id}`);
         }
         }
-        if (url.indexOf('extensions/required_configuration') >= 0) {
+        if (url.startsWith('https://api.twitch.tv/helix/extensions/required_configuration')) {
+            let sig = jwt.sign(sigPayload, extension_secret_usable);
+
             context.request.addHeader('Client-ID', `${client_id}`);
             context.request.addHeader('Authorization', `Bearer ${sig}`);
 
@@ -72,7 +78,7 @@ module.exports.requestHooks = [
         }
 
         // pubsub
-        if (url.indexOf('extensions/pubsub') >= 0) {
+        if (url.startsWith('https://api.twitch.tv/helix/extensions/pubsub')) {
             let body = context.request.getBodyText();
             try {
                 body = JSON.parse(body);
@@ -106,7 +112,9 @@ module.exports.requestHooks = [
             }
         }
         // chat
-        if (url.indexOf('extensions/chat') >= 0) {
+        if (url.startsWith('https://api.twitch.tv/helix/extensions/chat')) {
+            let sig = jwt.sign(sigPayload, extension_secret_usable);
+
             context.request.addHeader('Client-ID', `${client_id}`);
             context.request.addHeader('Authorization', `Bearer ${sig}`);
 
