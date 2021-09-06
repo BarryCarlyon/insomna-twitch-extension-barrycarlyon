@@ -15,4 +15,4 @@ To either clone of popular with your Extension Keys
 
 And 8 Requests that use JWT Auth.
 
-The `broadcaster` Config calls can use the `developer` segement, just swap the segment name.
+The `broadcaster` Config calls can use the `developer` `segment`, just swap the `segment` name.
