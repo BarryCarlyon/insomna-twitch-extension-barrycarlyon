@@ -2,6 +2,8 @@
 
 This is a plugin for [insomnia](https://insomnia.rest) that will help with Twitch Extension Development by handle JWT Generation for you.
 
+A sample Insomnia "Request Collection" is provided in [this repository](https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/tree/main/request_collection) for easy import and getting started!
+
 ## Configuration
 
 After installing this plugin. Create an Environment using this JSON Format:
