@@ -16,6 +16,8 @@
       "cli": "*"
     }
   },
-  "dependencies": [],
-  "devDependencies": []
+  "dependencies": {
+    "jsonwebtoken": "^8.5.1"
+  },
+  "devDependencies": {}
 }
