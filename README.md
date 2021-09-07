@@ -1,8 +1,15 @@
 # insomnia-plugin-twitch-extension-barrycarlyon
 
-This is a plugin for [insomnia](https://insomnia.rest) that will help with Twitch Extension Development by handle JWT Generation for you.
+This is a plugin for [insomnia](https://insomnia.rest) that will help with Twitch Extension Development by doing the JWT Generation for you. No more "expired" JWT's as one is generated at request time for you!
 
 A sample Insomnia "Request Collection" is provided in [this repository](https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/tree/main/request_collection) for easy import and getting started!
+
+## Install
+
+Either:
+- Use this in a browser `insomnia://plugins/install?name=insomnia-plugin-twitch-extension-barrycarlyon` (GH markdown disallows this schema)
+- Open Insomnia, Click on the Cog Top Right, Click Plugins and use `insomnia-plugin-twitch-extension-barrycarlyon` as the Package to install
+- Find this plugin on the [Insomnia Plugins list](https://insomnia.rest/plugins/insomnia-plugin-twitch-extension-barrycarlyon) instead!
 
 ## Configuration
 
