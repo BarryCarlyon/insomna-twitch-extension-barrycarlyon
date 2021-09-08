@@ -18,12 +18,13 @@ After installing this plugin. Create an Environment using this JSON Format:
 ```json
 {
   "client_id": "",
-  "client_secret": "",
   "extension_secret": "",
   "owner_id": "",
   "version": ""
 }
 ```
+
+Please make srue to express `owner_id` as a `string`
 
 Extension Secret should be the Base64 Encoded version, as the plugin will handle decoding.
 

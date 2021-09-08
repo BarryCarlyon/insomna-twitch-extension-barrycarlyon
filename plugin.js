@@ -3,17 +3,42 @@ const jwt = require('jsonwebtoken');
 module.exports.requestHooks = [
     async context => {
         console.log('Running insomna-twitch-extension-barrycarlyon')
-        const client_id = context.request.getEnvironmentVariable('client_id');
-        //const client_secret = context.request.getEnvironmentVariable('client_secret');
-        const extension_secret = context.request.getEnvironmentVariable('extension_secret');
-        const owner_id = context.request.getEnvironmentVariable('owner_id');
-        const version = context.request.getEnvironmentVariable('version');
-
-        const extension_secret_usable = Buffer.from(extension_secret, 'base64');
 
         let url = context.request.getUrl().toLowerCase();
         if (!url || url == '') {
             // no URL abort
+            return;
+        }
+        if (!url.startsWith('https://api.twitch.tv/helix/extensions/')) {
+            console.log('Skip Run insomna-twitch-extension-barrycarlyon');
+            return;
+        }
+
+        // validate the environment is good
+        const client_id = context.request.getEnvironmentVariable('client_id');
+        const extension_secret = context.request.getEnvironmentVariable('extension_secret');
+        const owner_id = context.request.getEnvironmentVariable('owner_id');
+        const version = context.request.getEnvironmentVariable('version');
+
+        if (
+            !client_id || client_id == ''
+            ||
+            !extension_secret || extension_secret == ''
+            ||
+            !owner_id || owner_id == "" || typeof owner_id != 'string'
+            ||
+            !version || version == "" || typeof version != 'string'
+        ) {
+            console.log('insomna-twitch-extension-barrycarlyon Enviroment is not complete');
+            return;
+        }
+
+        let extension_secret_usable = '';
+
+        try {
+            extension_secret_usable = Buffer.from(extension_secret, 'base64');
+        } catch (e) {
+            console.log('insomna-twitch-extension-barrycarlyon failed to process the secret');
             return;
         }
 

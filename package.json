@@ -1,26 +1,29 @@
 {
   "name": "insomnia-plugin-twitch-extension-barrycarlyon",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "main": "plugin.js",
   "license": "WTFPL",
   "author": "BarryCarlyon",
   "bugs": {
-      "url": "https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/issues"
+    "url": "https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/issues"
   },
   "homepage": "https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon#readme",
   "repository": {
-      "type": "git",
-      "url": "https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon.git"
+    "type": "git",
+    "url": "https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon.git"
   },
   "keywords": [
-      "insomnia",
-      "plugin",
-      "jwt",
-      "json web token",
-      "authentication"
+    "insomnia",
+    "plugin",
+    "jwt",
+    "json web token",
+    "authentication",
+    "twitch",
+    "twitch extensions",
+    "twitch jwt"
   ],
   "insomnia": {
-    "name": "twitch-extension-barrycarlyon",
+    "name": "insomnia-plugin-twitch-extension-barrycarlyon",
     "displayName": "Twitch Extensions JWT Generator",
     "description": "This Plugin uses an Insomnia Environment to generate JWT's for calling various Twitch Extension endpoints. It'll also smooth development by also JSON-ifing some payloads (yay nested JSON)",
     "publisher": {
@@ -28,7 +31,7 @@
       "icon": "https://github.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/blob/main/logo.png?raw=true"
     },
     "images": {
-        "icon": "logo.png"
+      "icon": "logo.png"
     },
     "applications": {
       "designer": "*",
