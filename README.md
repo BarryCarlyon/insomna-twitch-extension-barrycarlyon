@@ -24,7 +24,7 @@ After installing this plugin. Create an Environment using this JSON Format:
 }
 ```
 
-Please make srue to express `owner_id` as a `string`
+Please make sure to express `owner_id` as a `string`
 
 Extension Secret should be the Base64 Encoded version, as the plugin will handle decoding.
 
