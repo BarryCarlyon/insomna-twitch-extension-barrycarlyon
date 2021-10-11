@@ -13,7 +13,9 @@ Either:
 
 ## Configuration
 
-After installing this plugin. Create an Environment using this JSON Format:
+After installing this plugin.
+
+Create an Environment using this JSON Format:
 
 ```json
 {
@@ -24,11 +26,22 @@ After installing this plugin. Create an Environment using this JSON Format:
 }
 ```
 
-Please make srue to express `owner_id` as a `string`
+Please ensure that `owner_id` is expressed as a `string` otherwise the generated JWT's will not be valid.
 
-Extension Secret should be the Base64 Encoded version, as the plugin will handle decoding.
+The plugin will not fix this for you to ensure that you don't make the same mistake when moving to production code. So for example:
 
-Don't forget to set this environment as active
+```json
+{
+  "client_id": "MyExtensionClientID",
+  "extension_secret": "bXlleHRlbnNpb25zZWNyZWN0YXNiYXNlNjQ=",
+  "owner_id": "15185913",
+  "version": "0.0.1"
+}
+```
+
+Extension Secret should be the Base64 Encoded version directly copied from the Twitch Extension Dashboard, as the plugin will handle decoding.
+
+Don't forget to set this environment as active to Insomnia for your Collection.
 
 ## Usage
 
@@ -36,7 +49,6 @@ You will _not_ need to define any headers for the requests.
 This Plugin will add the `Client-ID` and `Authorization` headers for you
 
 You can also omit the following for each Endpoint this plugin supports
-
 
 ### [Get Extension Configuration Segment](https://dev.twitch.tv/docs/api/reference#get-extension-configuration-segment)
 
@@ -48,7 +60,8 @@ So just specify `segment` and `broadcaster_id` if needed
 
 You do not need to add a `JSON Body` parameter for `extension_id`. This plugin will do that for you.
 
-The "content" of the Config Service needs to be JSON Encoded. But if you are "lazy" and specify an object, the plugin will auto JSON Encode the content for you.
+The "content" of the Config Service needs to be a JSON Encoded string.
+But if you are "lazy" and specify an object instead, the plugin will auto JSON Encode the content for you.
 
 For example
 
@@ -70,7 +83,9 @@ or
 }
 ```
 
-Will work fine.
+Will work fine. As the plugin will convert the former to the latter for you.
+
+This makes reading the Insomnia JSON Panel a lot nicer and easier to format.
 
 ### [Set Extension Required Configuration](https://dev.twitch.tv/docs/api/reference#set-extension-required-configuration)
 
