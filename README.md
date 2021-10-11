@@ -13,8 +13,6 @@ Either:
 
 ### Collection Quick Start
 
-# Import from URL
-
 - Create
 - Import From
 - URL
