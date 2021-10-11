@@ -2,11 +2,22 @@
 
 This is an example request collection for Insomnia.
 
+# Import from File
+
 - Create
 - Import From
 - File
 
-Select the attached file
+Select this file you downloaded.
+
+# Import from USL
+
+- Create
+- Import From
+- URL
+- https://raw.githubusercontent.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/main/request_collection/collection.json
+
+# Using
 
 This will create `Twitch Extensions Insomnia`
 
