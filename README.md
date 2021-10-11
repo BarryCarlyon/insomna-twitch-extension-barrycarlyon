@@ -11,6 +11,20 @@ Either:
 - Open Insomnia, Click on the Cog Top Right, Click Plugins and use `insomnia-plugin-twitch-extension-barrycarlyon` as the Package to install
 - Find this plugin on the [Insomnia Plugins list](https://insomnia.rest/plugins/insomnia-plugin-twitch-extension-barrycarlyon) instead!
 
+### Collection Quick Start
+
+# Import from URL
+
+- Create
+- Import From
+- URL
+- Use: https://raw.githubusercontent.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/main/request_collection/collection.json
+
+This will create `Twitch Extensions Insomnia` Collection
+
+Which will contain a "Blank Twitch Environment"
+To either clone of populate with your Extension Keys
+
 ## Configuration
 
 After installing this plugin.

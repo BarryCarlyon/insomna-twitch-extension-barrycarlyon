@@ -10,19 +10,19 @@ This is an example request collection for Insomnia.
 
 Select this file you downloaded.
 
-# Import from USL
+# Import from URL
 
 - Create
 - Import From
 - URL
-- https://raw.githubusercontent.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/main/request_collection/collection.json
+- Use: https://raw.githubusercontent.com/BarryCarlyon/insomnia-plugin-twitch-extension-barrycarlyon/main/request_collection/collection.json
 
 # Using
 
-This will create `Twitch Extensions Insomnia`
+This will create `Twitch Extensions Insomnia` Collection
 
 Which will contain a "Blank Twitch Environment"
-To either clone of popular with your Extension Keys
+To either clone of populate with your Extension Keys
 
 And 8 Requests that use JWT Auth.
 
