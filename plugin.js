@@ -9,8 +9,12 @@ module.exports.requestHooks = [
             // no URL abort
             return;
         }
-        if (!url.startsWith('https://api.twitch.tv/helix/extensions/')) {
+        if (!url.startsWith('https://api.twitch.tv/helix/extensions')) {
             console.log('Skip Run insomna-twitch-extension-barrycarlyon');
+            return;
+        }
+        if (url.startsWith('https://api.twitch.tv/helix/extensions/transactions')) {
+            // this enpoint uses an App Access Token
             return;
         }
 
@@ -29,7 +33,7 @@ module.exports.requestHooks = [
             ||
             !version || version == "" || typeof version != 'string'
         ) {
-            console.log('insomna-twitch-extension-barrycarlyon Enviroment is not complete');
+            console.log('insomna-twitch-extension-barrycarlyon Environment is not complete');
             return;
         }
 
@@ -156,6 +160,17 @@ module.exports.requestHooks = [
                 // dont care
                 console.log('Extension Error', e);
             }
+        }
+        // get this extension version details
+        if (url == 'https://api.twitch.tv/helix/extensions') {
+            let sig = jwt.sign(sigPayload, extension_secret_usable);
+
+            context.request.addHeader('Client-ID', `${client_id}`);
+            context.request.addHeader('Authorization', `Bearer ${sig}`);
+
+            context.request.setParameter('extension_id', `${client_id}`);
+            context.request.setParameter('extension_version', `${version}`);
+            return;
         }
     }
 ]

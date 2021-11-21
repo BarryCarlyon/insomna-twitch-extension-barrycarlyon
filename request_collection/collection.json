@@ -1,8 +1,8 @@
 {
   "_type": "export",
   "__export_format": 4,
-  "__export_date": "2021-09-06T21:36:55.270Z",
-  "__export_source": "insomnia.desktop.app:v2021.5.2",
+  "__export_date": "2021-11-21T15:34:42.344Z",
+  "__export_source": "insomnia.desktop.app:v2021.6.0",
   "resources": [
     {
       "_id": "req_c1eb8ab6bb464ce4a21da94ccc515f3b",
@@ -291,6 +291,29 @@
       "_type": "request"
     },
     {
+      "_id": "req_7751389b87f84037a589a54eed52ab39",
+      "parentId": "fld_6e05f586cf864996a386738e39a854ee",
+      "modified": 1637508843921,
+      "created": 1637508832074,
+      "url": "https://api.twitch.tv/helix/extensions",
+      "name": "Get Extension",
+      "description": "",
+      "method": "GET",
+      "body": {},
+      "parameters": [],
+      "headers": [],
+      "authentication": {},
+      "metaSortKey": -1630943427040.5,
+      "isPrivate": false,
+      "settingStoreCookies": true,
+      "settingSendCookies": true,
+      "settingDisableRenderRequestBody": false,
+      "settingEncodeUrl": true,
+      "settingRebuildPath": true,
+      "settingFollowRedirects": "global",
+      "_type": "request"
+    },
+    {
       "_id": "env_2e652e2ec586de6d52f561086ff9570517dd77e4",
       "parentId": "wrk_eaf35713b99244d59fb9606fb71f3f45",
       "modified": 1630964124065,
@@ -325,7 +348,7 @@
     {
       "_id": "env_b31b7e7508974d73aa2d548a9e73c969",
       "parentId": "env_2e652e2ec586de6d52f561086ff9570517dd77e4",
-      "modified": 1630964137760,
+      "modified": 1637508823403,
       "created": 1630964126242,
       "name": "Blank Twitch Extension",
       "data": {

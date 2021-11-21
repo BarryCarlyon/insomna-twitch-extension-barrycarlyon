@@ -1,6 +1,6 @@
 {
   "name": "insomnia-plugin-twitch-extension-barrycarlyon",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "main": "plugin.js",
   "license": "WTFPL",
   "author": "BarryCarlyon",

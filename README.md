@@ -138,7 +138,7 @@ or
 }
 ```
 
-### [Send Extension Chat Message](https://dev.twitch.tv/docs/api/reference#send-extension-chat-messagee)
+### [Send Extension Chat Message](https://dev.twitch.tv/docs/api/reference#send-extension-chat-message)
 
 The plugin will set the required body parameters of `extension_id` and `extension_version` for you. So a JSON body of
 
@@ -149,3 +149,7 @@ The plugin will set the required body parameters of `extension_id` and `extensio
 ```
 
 will do the job. Just don't forget the `Query` parameter of `broadcaster_id`
+
+### [Get Extensions](https://dev.twitch.tv/docs/api/reference#get-extensions)
+
+The plugin will set the required query parameters of `extension_id` and optional parameters of `extension_version` for you.
