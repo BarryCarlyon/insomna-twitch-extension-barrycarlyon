@@ -38,6 +38,8 @@ Create an Environment using this JSON Format:
 }
 ```
 
+A `version` isn't required, just make sure to specify a `version` as dictated by the Twitch Documentation for the relevant endpoints, either in the query parameters or JSON body depending on the endpoint.
+
 Please ensure that `owner_id` is expressed as a `string` otherwise the generated JWT's will not be valid.
 
 The plugin will not fix this for you to ensure that you don't make the same mistake when moving to production code. So for example:
@@ -148,8 +150,18 @@ The plugin will set the required body parameters of `extension_id` and `extensio
 }
 ```
 
-will do the job. Just don't forget the `Query` parameter of `broadcaster_id`
+will do the job. Just don't forget the `Query` parameter of `broadcaster_id`.
+
+You can override the Environment set `extension_version` by using a body parameter:
+
+```json
+{
+    "text": "words",
+    "extension_version": "some_version"
+}
+```
 
 ### [Get Extensions](https://dev.twitch.tv/docs/api/reference#get-extensions)
 
 The plugin will set the required query parameters of `extension_id` and optional parameters of `extension_version` for you.
+You can override the Environment set `extension_version` via the Query String Parameters.

@@ -30,12 +30,14 @@ module.exports.requestHooks = [
             !extension_secret || extension_secret == ''
             ||
             !owner_id || owner_id == "" || typeof owner_id != 'string'
-            ||
-            !version || version == "" || typeof version != 'string'
         ) {
             console.log('insomna-twitch-extension-barrycarlyon Environment is not complete');
             return;
         }
+/*
+            ||
+            !version || version == "" || typeof version != 'string'
+*/
 
         let extension_secret_usable = '';
 
@@ -169,7 +171,9 @@ module.exports.requestHooks = [
             context.request.addHeader('Authorization', `Bearer ${sig}`);
 
             context.request.setParameter('extension_id', `${client_id}`);
-            context.request.setParameter('extension_version', `${version}`);
+            if (!context.request.getParameter('extension_version')) {
+                context.request.setParameter('extension_version', `${version}`);
+            }
             return;
         }
     }
