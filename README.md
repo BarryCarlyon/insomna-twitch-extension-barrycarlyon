@@ -169,3 +169,6 @@ If there is no environment set `version` then this API will return the released 
 
 You can override the environment by specifying a Query parameter of `extension_version`
 
+## Other Tools!
+
+For a more "fully fledged" Twitch Extensions Tools Client, check out my "[Twitch Extension Tools](https://github.com/barrycarlyon/twitch_extension_tools)" Project
