@@ -13,8 +13,12 @@ module.exports.requestHooks = [
             console.log('Skip Run insomna-twitch-extension-barrycarlyon');
             return;
         }
-        if (url.startsWith('https://api.twitch.tv/helix/extensions/transactions')) {
-            // this enpoint uses an App Access Token
+        if (
+            url.startsWith('https://api.twitch.tv/helix/extensions/transactions')
+            ||
+            url.startsWith('https://api.twitch.tv/helix/extensions/released')
+        ) {
+            // these enpoints use an App Access Token
             return;
         }
 
