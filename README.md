@@ -20,7 +20,7 @@ Either:
 
 This will create `Twitch Extensions Insomnia` Collection
 
-Which will contain a "Blank Twitch Environment"
+Which will contain a `Blank Twitch Environment`
 To either clone of populate with your Extension Keys
 
 ## Configuration
@@ -38,11 +38,13 @@ Create an Environment using this JSON Format:
 }
 ```
 
-A `version` isn't required, just make sure to specify a `version` as dictated by the Twitch Documentation for the relevant endpoints, either in the query parameters or JSON body depending on the endpoint.
+A `version` isn't required, just make sure to specify a `version` as dictated by the Twitch Documentation for the relevant endpoints, either in the `Query` parameters or JSON body depending on the endpoint.
+
+You can specify a `version` to make your environment more similar to a production `.env`
 
 Please ensure that `owner_id` is expressed as a `string` otherwise the generated JWT's will not be valid.
 
-The plugin will not fix this for you to ensure that you don't make the same mistake when moving to production code. So for example:
+This Plugin will not fix/cast to String for you, to ensure that you don't make the same mistake when moving to production code. So for example:
 
 ```json
 {
@@ -163,11 +165,11 @@ You can override the Environment set `extension_version` by using a body paramet
 
 ### [Get Extensions](https://dev.twitch.tv/docs/api/reference#get-extensions)
 
-The plugin will set the required query parameters of `extension_id`.
+The plugin will set the required `Query` parameters of `extension_id`.
 
-If there is no environment set `version` then this API will return the released version of the Extension, otherwise the optional query parameter of `extension_version` is set from the environment.
+If there is no environment set `version` then this API will return the released version of the Extension, otherwise the optional `Query` parameter of `extension_version` is set from the environment.
 
-You can override the environment by specifying a Query parameter of `extension_version`
+You can override the environment by specifying a `Query` parameter of `extension_version`
 
 ## Other Tools!
 
