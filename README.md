@@ -163,5 +163,9 @@ You can override the Environment set `extension_version` by using a body paramet
 
 ### [Get Extensions](https://dev.twitch.tv/docs/api/reference#get-extensions)
 
-The plugin will set the required query parameters of `extension_id` and optional parameters of `extension_version` for you.
-You can override the Environment set `extension_version` via the Query String Parameters.
+The plugin will set the required query parameters of `extension_id`.
+
+If there is no environment set `version` then this API will return the released version of the Extension, otherwise the optional query parameter of `extension_version` is set from the environment.
+
+You can override the environment by specifying a Query parameter of `extension_version`
+
